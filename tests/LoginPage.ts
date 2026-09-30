@@ -11,8 +11,8 @@ export class LoginPage extends BasePage {
   constructor(page: Page) {
     super(page);
     // getByPlaceholder/getByRole = locators "user-facing", recommandés par Playwright
-    this.usernameInput = page.getByPlaceholder('Username');
-    this.passwordInput = page.getByPlaceholder('Password');
+    this.usernameInput = page.getByPlaceholder('utilisateur');
+    this.passwordInput = page.getByPlaceholder('mot de passe');
     this.loginButton = page.getByRole('button', { name: 'Login' });
     this.errorMessage = page.locator('[data-test="error"]');
   }
